@@ -6,7 +6,7 @@ AI Project
 
 November 29, 2019
 
-**Approaches** :
+### Approaches :
 
 
 When I began the project my first thoughts were to become “good” at the game so I can identify
@@ -24,7 +24,8 @@ My next approach was to calculate all the probabilities for each existing hand o
 compare it to the probabilities of each hand with the addition of the next card. This proved to
 be very successful averaging on its own 45.133 points
 
-**Programming**
+
+### Programming
 
 
 Programming the methods to quickly calculate probabilities was extremely difficult since
@@ -39,7 +40,8 @@ After probabilities are calculated they are very useless, pairs make up 40% of m
 as royal and straight flushes are both < 0.004 % chance of occurring. For this reason, I used the
 probabilities to calculate utilities in 2 dimensions. Row utilities and column utilities.
 
-**Utilities**
+
+### Utilities
 
 To calculate the Expected utilities, I initially used the British scoring system as my U(0). The
 expected utilities generated can be combined into a 5x5 grid giving the Expected Utility of each
@@ -69,13 +71,15 @@ Once the Expected Utilities are generated I do one of the following
 GreedyMonteCarloPlayer.
 - If there are less than 2 plays above 1.0 play the max utility play
 
-**Speed**
+
+### Speed
 
 The AI runs with no MonteCarlo in less than 5ms. This leaves plenty of room to allow MC to take
 its time whenever needed. Meaning that when MC is enabled, we can use a much deeper depth
 limit since time spent on each space is on average 5-10 times longer.
 
-**Performance**
+
+### Performance
 
 The performance of the AI is very good, compared to my previous attempts my AI can defeat the
 GreedyMCPlayer almost 80% of the time. This is possible since my AI uses a modified version of
@@ -86,7 +90,7 @@ from half a second to the whole 30 seconds depending on game complexity (general
 games are higher scoring)
 
 
-**Problems**
+### Problems
 
 Problems I have run into with the algorithm is the randomness of the MonteCarlo algorithm.
 Since they can make bad decisions the scores can vary to very much higher to very low when
